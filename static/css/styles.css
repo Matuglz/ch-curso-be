@@ -76,3 +76,29 @@ form{
     justify-content: flex-end;
     margin-left: auto;
 }
+
+
+/* cart ------------------------------------- */
+
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+}
+
+.prodContainer{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.productCard{
+    text-align: center;
+    width: 200px;
+    border: 2px solid;
+    height: 300px;
+}
+
+.imgProd{
+    width: 100%;
+}

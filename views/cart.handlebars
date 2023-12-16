@@ -1,0 +1,20 @@
+<div class="cartContainer">
+    <h2>Carrito de productos</h2>
+    <div class="prodContainer">
+        {{#each prods}}
+        <div class="productCard">
+            <img class="imgProd" src={{#if
+                this._id.thumbnail.[0]}}{{this._id.thumbnail.[0]}}{{else}}'../../static/img/default-product-img.png'{{/if}}>
+
+            <div>
+                <p>{{this._id.title}}</p>
+                <p>
+                    <button>-</button>
+                    <small>{{this.cantidad}}</small>
+                    <button>+</button>
+                </p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

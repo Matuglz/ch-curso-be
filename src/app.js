@@ -2,15 +2,15 @@ import { updateProductRouter } from "./routers/CRUD-Products/updateProductsRoute
 import { createProductsRouter } from "./routers/CRUD-Products/CreateProductsRouter.js"
 import { deleteProductRouter } from "./routers/CRUD-Products/DeleteProductsRouter.js"
 import { CartRouter } from "./routers/cart/CartRouter.js"
-import { getCartProducts } from "./routers/cart/getCartProductsRouter.js"
-import { AddProductsToCart } from "./routers/cart/AddProductToCartRouter.js"
-import { ProductsRenderRouter } from "./routers/ProductsRenderRouter.js"
+import { crudCartProducts } from "./routers/cart/crudCartProducts.js"
+import { ProductsRenderRouter } from "./routers/CRUD-Products/ProductsRenderRouter.js"
 import { chatRouter } from "./routers/chatRouter.js"
 
 import express from "express"
 import handlebars from 'express-handlebars'
 import { Server } from "socket.io"
 import { mesageManager, productsManager } from "../db/mainDB.js"
+
 
 
 const app = express()
@@ -24,8 +24,7 @@ app.use(updateProductRouter)
 app.use(createProductsRouter)
 app.use(deleteProductRouter)
 app.use(chatRouter)
-app.use("/api/carts/", AddProductsToCart)
-app.use("/api/carts/", getCartProducts)
+app.use("/api/carts/", crudCartProducts)
 app.use("/api/carts/", CartRouter)
 
 const PORT = 8080
@@ -68,6 +67,3 @@ io.on('connection', (socket) => {
     })
 })
 
-app.get('/', async (req,res)=>{
-    res.json(await productsManager.find().lean())
-})
