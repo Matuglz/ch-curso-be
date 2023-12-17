@@ -1,6 +1,7 @@
 *{
     text-decoration: none;
     list-style: none;
+
 }
 
 .img-card{
@@ -101,4 +102,21 @@ form{
 
 .imgProd{
     width: 100%;
+}
+
+/* nav-user ------------------------------------- */
+
+.nav-user{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-user ul{
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.nav-user ul li a:hover{
+    color: red;
 }

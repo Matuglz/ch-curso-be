@@ -7,3 +7,4 @@ await mongoose.connect(process.env.MONGODB_ATLAS_ACCESS_STRING)
 export { productsManager } from './models/productModel.js'
 export { cartsManager } from './models/cartsModel.js'
 export { mesageManager } from './models/mesageModel.js'
+export { userManager } from './models/usersModel.js'
