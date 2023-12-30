@@ -1,4 +1,19 @@
 
+window.addEventListener('load', async () => {
+  const response = await fetch('/api/Login/current')
+  if (response.status === 403) {
+    alert('debes loguearte para ver esta informacion!')
+    return window.location.href = '/Login'
+  }
+
+  const user = await response.json()
+
+  document.querySelector('#name').innerHTML = user.name
+  document.querySelector('#email').innerHTML = user.email
+  document.querySelector('#rol').innerHTML = user.rol
+})
+
+
 
 const form = document.querySelector('#FormLogOut')
 

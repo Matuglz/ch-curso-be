@@ -10,8 +10,7 @@ form.addEventListener('submit', async (e)=>{
 
 
     if(res.status == 201){
-        const {payload : user} = await res.json()
-        alert(`${user.name} ¡BIENVENIDO!`)
+        alert(` ¡BIENVENIDO!`)
         setTimeout(() => {
             window.location.href = '/'
         }, 1000);

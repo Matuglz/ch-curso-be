@@ -2,7 +2,7 @@ import { Router } from "express"
 export const updateProductRouter = Router()
 import { productsManager } from "../../../db/mainDB.js"
 import multer from "multer"
-import { updateImgS3 } from "../../awsFunctions.js"
+import { updateImgS3 } from "../../functions/awsFunctions.js"
 
 updateProductRouter.get("/UpdateProduct", async (req, res) => {
     res.render("updateProduct.handlebars")

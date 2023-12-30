@@ -10,9 +10,10 @@ import express from "express"
 import handlebars from 'express-handlebars'
 import { Server } from "socket.io"
 import { mesageManager, productsManager } from "../db/mainDB.js"
-import { sessions } from "./middlewares/sessions.js"
 import { webRouter } from "./routers/users/webRouter.js"
 import { apiUsers } from "./routers/users/api/apiUsers.js"
+import { sessions } from "./middlewares/sessions.js"
+import { passportInitialize, passportSession } from "./middlewares/authentication.js"
 
 
 
@@ -23,6 +24,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use("/static", express.static("./static"))
 app.use(sessions)
+app.use(passportInitialize, passportSession)
 
 app.use(ProductsRenderRouter)
 app.use(updateProductRouter)
@@ -31,8 +33,9 @@ app.use(deleteProductRouter)
 app.use(chatRouter)
 app.use("/api/carts/", crudCartProducts)
 app.use("/api/carts/", CartRouter)
-app.use('/api',apiUsers)
 app.use(webRouter)
+app.use('/api',apiUsers)
+
 
 
 const PORT = 8080

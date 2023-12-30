@@ -1,6 +1,6 @@
 import { Router } from "express"
 import { productsManager } from "../../../db/mainDB.js"
-import { subirArchivo } from "../../awsFunctions.js";
+import { subirArchivo } from "../../functions/awsFunctions.js";
 import multer from "multer";
 export const createProductsRouter = Router()
 

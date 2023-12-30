@@ -9,12 +9,12 @@ form.addEventListener('submit', async (e)=>{
     })
 
 
-    if(res.status == 201){
-        const {payload : user} = await res.json()
-        alert(` ¡BIENVENIDO!`)
+    if(res.status == 204){
         setTimeout(() => {
-            window.location.href = '/'
+            window.location.href = '/Profile'
         }, 1000);
-
+    }else if(res.status == 401){
+        const {message : error}  = await res.json()
+        alert(error)
     }
 })

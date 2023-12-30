@@ -5,15 +5,12 @@ export const registerRouter = Router()
 
 registerRouter.post('/', async (req, res) => {
     try {
-        console.log(req.body);
-        const newUser = await userManager.create(req.body)
-        res.status(201).json({
-            status: 'success',
-            payload: newUser.toObject()
-        })
-
-    } catch (error) {
-        res.status(400).json('error', error)
+        await userManager.register(req.body)
+        res.status(201).json({ status: 'success', message: 'register complete' })
+    }
+    catch (error) {
+        res.status(400).json({ status: 'error', message: error.message })
     }
 })
+
 

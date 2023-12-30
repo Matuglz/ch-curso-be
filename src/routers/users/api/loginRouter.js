@@ -1,34 +1,27 @@
 import { Router } from "express";
-import { userManager } from "../../../../db/mainDB.js";
-import { config as configDotenv } from "dotenv";
-configDotenv()
+import passport from "passport";
+import { preLoginRule } from '../../../middlewares/autorization.js'
 
 export const loginRouter = Router()
 
-loginRouter.post('/', async(req,res)=>{
-    const findUser = await userManager.findOne(req.body)
-    if(!findUser){
-        res.status(401).json({status: 'error', message:'login failed'})
-    }   
-        
-    req.session['user']={
-        name: findUser.name,
-        lastName: findUser.lastName,
-        age: findUser.age,
-        email:findUser.email
-    }
 
-    if(findUser.email == process.env.ADMIN_EMAIL){
-        req.session['user'].rol = 'Admin'
-    }else{
-        req.session['user'].rol= 'User'
+loginRouter.post('/',
+    passport.authenticate('loginLocal', { failWithError: true }),
+    async (req, res, next) => {
+        res.status(204).json({ status: 'success', message: 'login success' })
+    },
+    (error, req, res, next) => {
+        res.status(401).json({ status: 'error', message: error.message })
     }
-    console.log(req.session['user']);
-    res.status(201).json({status: 'success'})
+)
+
+loginRouter.get('/current', preLoginRule, (req, res) => {
+    res.json(req.user)
 })
+
 
 loginRouter.delete('/Current', async (req, res) => {
     req.session.destroy(err => {
-      res.status(204).json({ status: 'success' })
+        res.status(204).json({ status: 'success' })
     })
-  })
+})

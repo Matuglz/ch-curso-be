@@ -1,18 +1,32 @@
 import { Router } from "express";
-import { preLoginRule } from "../../middlewares/preLoginRule.js";
-
+import passport from "passport";
 export const webRouter = Router()
 
-webRouter.get('/Register' , (req,res)=>{
+webRouter.get('/Register', (req, res) => {
     res.render('register.handlebars')
 })
 
-webRouter.get('/Login' , (req,res)=>{
+webRouter.get('/Login', (req, res) => {
     res.render('login.handlebars')
 })
 
-webRouter.get('/Profile', preLoginRule,(req,res)=>{
-    res.render('profile.handlebars',{
-        ...req.session['user']
-    })
-})
+webRouter.get('/githubLogin', passport.authenticate('loginGithub'))
+webRouter.get('/githubCallback', passport.authenticate('loginGithub',{
+    successRedirect:'/Profile',
+    failureRedirect:'/Login'
+}))
+
+webRouter.get('/auth/google', passport.authenticate('loginGoogle', {scope: ['profile','email']}))
+webRouter.get('/auth/google/callback', passport.authenticate('loginGoogle',{
+    successRedirect: '/Profile',
+    failureRedirect: '/Login'
+}))
+
+
+webRouter.get('/Profile', (req, res) =>{
+    res.render('profile.handlebars', {
+      pageTitle: 'Perfil',
+      user: req.user
+    })}
+    
+    )
