@@ -5,7 +5,7 @@ import mongoosePaginate from 'mongoose-paginate-v2'
 
 const cartsSchema = new Schema({
     _id: { type: String, default: randomUUID },
-    productos: [
+    articles: [
         {
             _id: { type: String, ref:'products'},
             cantidad: { type: Number}

@@ -5,6 +5,7 @@ export const registerRouter = Router()
 
 registerRouter.post('/', async (req, res) => {
     try {
+        console.log(req.body);
         await userManager.register(req.body)
         res.status(201).json({ status: 'success', message: 'register complete' })
     }

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import passport from "passport";
+import { userManager } from "../../../db/mainDB.js";
 export const webRouter = Router()
 
 webRouter.get('/Register', (req, res) => {
@@ -23,10 +24,10 @@ webRouter.get('/auth/google/callback', passport.authenticate('loginGoogle',{
 }))
 
 
-webRouter.get('/Profile', (req, res) =>{
+webRouter.get('/Profile', async (req, res) =>{
+    const userPopulate = await userManager.allPopulate(req.user)
     res.render('profile.handlebars', {
       pageTitle: 'Perfil',
-      user: req.user
+      user: userPopulate
     })}
-    
     )

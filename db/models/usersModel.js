@@ -2,18 +2,20 @@ import { mongoose } from "mongoose";
 import { randomUUID } from 'node:crypto'
 import { hashPassword, isValidPwd } from "../../src/functions/bcryptFunctions.js";
 import { config as configDotenv } from "dotenv";
+import { cartsManager } from "../mainDB.js";
 configDotenv()
 
 const collection = 'users'
 
 const userSchema = new mongoose.Schema({
     _id: { type: String, default: randomUUID },
-    email: { type: String, require: true, unique: true },
+    email: { type: String, required: true, unique: true },
     password: { type: String },
     age: { type: Number },
-    name: { type: String, require: true },
+    name: { type: String, required: true },
     lastName: { type: String },
-    provider: { type: String, default: 'Local' }
+    provider: { type: String, default: 'Local' },
+    cart: {type:String, ref:'carts', required: true}
 },
     {
         strict: 'throw',
@@ -30,7 +32,8 @@ const userSchema = new mongoose.Schema({
                     if (body.password) {
                         body.password = hashPassword(body.password)
                     }
-                    console.log('body desde el model',body);
+                    const cart = await cartsManager.create({})
+                    body.cart = cart._id
                     await mongoose.model(collection).create(body)
                 }
                 catch (error) {
@@ -63,6 +66,12 @@ const userSchema = new mongoose.Schema({
                     datosUsuario.rol = 'User'
                 }
                 return datosUsuario
+            },
+            allPopulate: async function(user){
+                    const cartProductsPopulate = await cartsManager.findOne({id: user.cart}).populate({path:'articles._id', model:'products'}).lean()
+                    const userPopulate = await mongoose.model(collection).findOne({email: user.email}).populate('cart').lean()
+                    userPopulate.cart = cartProductsPopulate
+                    return userPopulate
             }
         }
     })
