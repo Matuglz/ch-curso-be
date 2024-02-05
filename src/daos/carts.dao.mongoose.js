@@ -1,7 +1,6 @@
 import { Schema, model, mongoose } from 'mongoose'
 import { randomUUID } from 'node:crypto'
 import mongoosePaginate from 'mongoose-paginate-v2'
-import { MONGODB_ATLAS_ACCESS_STRING } from '../config/config.js'
 import { productsService } from '../service/products.service.js'
 
 const cartsSchema = new Schema({
@@ -103,8 +102,5 @@ class cartsDaoMongoose {
 
 export async function getCartsDao() {
     let cartsDao
-    if(mongoose.connection.readyState === 0 || 3){
-        await mongoose.connect(MONGODB_ATLAS_ACCESS_STRING)
-    }
     return cartsDao = new cartsDaoMongoose
 }

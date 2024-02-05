@@ -8,6 +8,7 @@ export async function createCart(req, res, next) {
         const cart = await cartsService.createCart()
         res.created(cart)
     } catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -20,6 +21,7 @@ export async function getCarts(req, res, next) {
         res.result(cart)
     }
     catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -34,6 +36,7 @@ export async function addProductsToCart(req, res, next) {
         res.result(cart)
     }
     catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -47,6 +50,7 @@ export async function deleteCartProduct(req, res, next) {
         await cartsService.deleteProductFromCart(cartId, prodId)
         res.deleted()
     } catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -60,6 +64,7 @@ export async function deleteAllCartProducts(req, res, next) {
         res.deleted()
     }
     catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -70,28 +75,34 @@ export async function buyCartController(req, res, next) {
     try {
         let boughtProducts = []
 
-
         const cart = await cartsService.cartPopulate(req.params.cid)
+
         for (const p of cart.articles) {
             try {
                 const product = await productsService.removeStock(req.params.cid, p._id._id, p.cantidad)
                 boughtProducts.push({ productId: product._id, quantity: product.quantity, price: product.price })
             }
             catch (error) {
-                console.log(error.message);
+                console.log(error.message)
             }
         }
 
-        let ticketPrice = boughtProducts.reduce((acc, val) => acc + val.quantity * val.price, 0)
-        const ticket = await ticketSerice.makeTicket({
-            products: boughtProducts,
-            amount: ticketPrice,
-            pucharser: 'matias@gmail.com'
+        if (boughtProducts.length > 0) {
+            let ticketPrice = boughtProducts.reduce((acc, val) => acc + val.quantity * val.price, 0)
+            const ticket = await ticketSerice.makeTicket({
+                products: boughtProducts,
+                amount: ticketPrice,
+                pucharser: req.user.email
 
-        })
-        res.bought()
+            })
+            res.bought()
+            boughtProducts = []
+        } else { 
+            throw new Error('dont have articles to buy')
+         }
     }
     catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }

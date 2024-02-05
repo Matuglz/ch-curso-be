@@ -7,6 +7,7 @@ export async function registerController(req, res, next) {
         res.created(user)
     }
     catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -15,6 +16,7 @@ export async function registerController(req, res, next) {
 export async function logOutController(req, res, next) {
 
         req.session.destroy(err => {
+            err.statusCode = 400
             next(err)
             res.logout()
         })
@@ -26,27 +28,17 @@ export async function profileController(req, res, next) {
             user: req.user,
         })
     } catch (error) {
+        error.statusCode = 400
         next(error)
     }
 
 }
 
-// export function loginController(req, res, next) {
-//     try {
-//         passport.authenticate('loginLocal', { failWithError: true })
-//         console.log(req.user);
-//         res.loged(req.user)
-//     }
-//     catch (error) {
-//         next(error)
-//     }
-
-// }
-
 
 export function loginController(req, res, next) {
     passport.authenticate('loginLocal', (err, user, info) => {
         if (err) {
+            err.statusCode = 400
             return next(err)
         }
         if (!user) {
@@ -54,6 +46,7 @@ export function loginController(req, res, next) {
         }
         req.login(user,(error) => {
             if (error) {
+                error.statusCode = 400
                 return next(error);
             }
             res.loged(req.user);

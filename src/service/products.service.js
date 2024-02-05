@@ -6,7 +6,6 @@ const productsDao = await getProductsDao()
 class productsServices{
 
     async removeStock(cartId, prodId, quantity){
-        console.log(cartId,prodId, quantity);
         return await productsDao.substractStock(cartId,prodId, quantity)
     }
 

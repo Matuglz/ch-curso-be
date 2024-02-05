@@ -8,6 +8,7 @@ export async function createProductController(req, res, next) {
         subirArchivo(req, newProduct)
         res.created(newProduct)
     } catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -21,6 +22,7 @@ export async function deleteProductController(req, res, next) {
         const productDeleted = await productsService.deleteProduct(id)
         res.deleted(productDeleted)
     } catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -44,6 +46,7 @@ export async function readProductsController(req, res, next) {
             ...products
         })
     } catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }
@@ -70,6 +73,7 @@ export async function updateProductsController(req, res, next) {
         res.updated(prodUpdated)
     }
     catch (error) {
+        error.statusCode = 400
         next(error)
     }
 }

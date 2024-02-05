@@ -1,7 +1,6 @@
 import { Schema, model, mongoose } from "mongoose";
 import { randomUUID } from "node:crypto"
 import mongoosePaginate from 'mongoose-paginate-v2'
-import { MONGODB_ATLAS_ACCESS_STRING } from "../config/config.js";
 import { cartsService } from "../service/carts.service.js";
 
 
@@ -29,10 +28,10 @@ class productsDaoMongoose {
         
         try {
             const product = await productsManager.findById(prodId)
-            console.log('producto encontrado', product);
 
-            if(!product || product.stock < quantity){
-                throw new Error('There is not enough stock')
+
+            if(product.stock < quantity){
+                throw new Error(`There is not enough stock of ${product.title}`)
             }
 
             const newStock = product.stock - quantity
@@ -106,8 +105,5 @@ class productsDaoMongoose {
 
 export async function getProductsDao() {
     let productsDao
-    if (mongoose.connection.readyState === 0 || 3) {
-        await mongoose.connect(MONGODB_ATLAS_ACCESS_STRING)
-    }
     return productsDao = new productsDaoMongoose
 }

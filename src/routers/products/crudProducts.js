@@ -1,6 +1,6 @@
 import { Router } from "express"
 import multer from 'multer'
-import { createProductController, deleteProductController, readProductsController, updateProductsController } from "../../controllers/products.controller.js"
+import { createProductController, deleteProductController, updateProductsController } from "../../controllers/products.controller.js"
 import { onlyAdmins } from "../../middlewares/autorization.js"
 
 
@@ -16,5 +16,5 @@ crudProducts.get('/createProduct/current', onlyAdmins)
 crudProducts.get('/deleteProduct/current', onlyAdmins)
 crudProducts.delete('/deleteProduct', onlyAdmins, deleteProductController)
 
-crudProducts.get('/updateProduct/current', onlyAdmins, onlyAdmins)
+crudProducts.get('/updateProduct/current', onlyAdmins)
 crudProducts.put('/updateProduct', upload.single('img'), updateProductsController)

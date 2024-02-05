@@ -2,7 +2,6 @@ import { mongoose } from "mongoose";
 import { randomUUID } from 'node:crypto'
 import { hashPassword, isValidPwd } from "../../src/functions/bcryptFunctions.js";
 import { cartsService } from "../../src/service/carts.service.js";
-import { MONGODB_ATLAS_ACCESS_STRING } from "../config/config.js";
 
 const collection = 'users'
 
@@ -98,8 +97,5 @@ class usersDaoMongoose{
 
 export async function getUsersDao() {
     let usersDao
-    if(mongoose.connection.readyState === 0 || mongoose.connection.readyState === 3){
-        await mongoose.connect(MONGODB_ATLAS_ACCESS_STRING)
-    }
     return usersDao = new usersDaoMongoose
 }

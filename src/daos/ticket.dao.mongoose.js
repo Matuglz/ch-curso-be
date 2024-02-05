@@ -27,8 +27,5 @@ class ticketsDao{
 
 export async function getTicketsDao() {
     let ticketDao
-    if(mongoose.connection.readyState === 0 || mongoose.connection.readyState === 3){
-        await mongoose.connect(MONGODB_ATLAS_ACCESS_STRING)
-    }
     return ticketDao = new ticketsDao()
 }
