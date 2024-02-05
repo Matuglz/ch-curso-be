@@ -1,10 +1,12 @@
 import passport from "passport"
 import { usersService } from "../service/users.service.js"
+import { emailService } from "../service/email.service.js"
 
 export async function registerController(req, res, next) {
     try {
         const user = await usersService.register(req.body)
-        res.created(user)
+        await emailService.sendEmail(user.email, user._id)
+        res.created()
     }
     catch (error) {
         error.statusCode = 400
@@ -15,11 +17,11 @@ export async function registerController(req, res, next) {
 
 export async function logOutController(req, res, next) {
 
-        req.session.destroy(err => {
-            err.statusCode = 400
-            next(err)
-            res.logout()
-        })
+    req.session.destroy(err => {
+        err.statusCode = 400
+        next(err)
+        res.logout()
+    })
 }
 
 export async function profileController(req, res, next) {
@@ -44,7 +46,7 @@ export function loginController(req, res, next) {
         if (!user) {
             return res.status(401).json({ message: info ? info.message : 'Login failed' });
         }
-        req.login(user,(error) => {
+        req.login(user, (error) => {
             if (error) {
                 error.statusCode = 400
                 return next(error);

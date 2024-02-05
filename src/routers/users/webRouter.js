@@ -30,3 +30,5 @@ webRouter.get('/Profile', async (req, res) =>{
       user: req.user
     })}
     )
+
+webRouter.get('/AuthEmail', (req,res)=>{res.render('authentication.handlebars')})

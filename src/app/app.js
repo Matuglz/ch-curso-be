@@ -18,7 +18,6 @@ import { webCarts } from "../routers/cart/webCart.js"
 import { betterErrors } from "../middlewares/betterError.js"
 
 
-
 export const app = express()
 
 //CONNECT DATABASE MONGODB ATLAS
@@ -46,5 +45,6 @@ app.use('/api',apiUsers)
 app.use('/api', cartApi)
 app.use(webCarts)
 app.use(webRouter)
+
 
 app.use(betterErrors)

@@ -14,6 +14,11 @@ window.addEventListener('load', async () => {
   document.querySelector('#name').innerHTML = user.name
   document.querySelector('#email').innerHTML = user.email
   document.querySelector('#rol').innerHTML = user.rol
+  if(user.auth === true){
+    document.querySelector('#auth').innerHTML = 'Validado!'
+  }else{
+    document.querySelector('#auth').innerHTML = 'Sin validar!'
+  }
   const cart = document.querySelector('#ACart')
   cart.addEventListener('click', ()=>{
     window.location.href = `/cart/${user.cart}`

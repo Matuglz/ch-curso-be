@@ -15,6 +15,10 @@ class usersServices{
     async userPopulate(email){
         return await usersDao.allPopulate(email)
     }
+
+    async authenticate(id){
+        return await usersDao.authEmail(id)
+    }
 }
 
 export const usersService = new usersServices()

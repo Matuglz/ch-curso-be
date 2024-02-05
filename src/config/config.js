@@ -24,3 +24,6 @@ export const GITHUB_APP_CLIENT_SECRET = process.env.GITHUB_APP_CLIENT_SECRET
 export const GOOGLE_AUTH_APP_CLIENT_ID = process.env.GOOGLE_AUTH_APP_CLIENT_ID
 export const GOOGLE_AUTH_APP_SECRET_ID = process.env.GOOGLE_AUTH_APP_SECRET_ID
 export const GOOGLE_AUTH_APP_CALLBACK_URL = process.env.GOOGLE_AUTH_APP_CALLBACK_URL
+
+export const EMAIL_USER = process.env.EMAIL_USER
+export const EMAIL_PASS = process.env.EMAIL_PASS

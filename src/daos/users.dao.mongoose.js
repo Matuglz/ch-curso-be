@@ -8,6 +8,7 @@ const collection = 'users'
 const userSchema = new mongoose.Schema({
     _id: { type: String, default: randomUUID },
     email: { type: String, required: true, unique: true },
+    authEmail:{type:Boolean, default:false},
     password: { type: String },
     age: { type: Number },
     name: { type: String, required: true },
@@ -32,7 +33,8 @@ const userSchema = new mongoose.Schema({
                     }
                     const cart = await cartsService.createCart({})
                     body.cart = cart._id
-                    await mongoose.model(collection).create(body)
+                    return await mongoose.model(collection).create(body)
+                    
                 }
                 catch (error) {
                     throw error
@@ -52,11 +54,13 @@ const userSchema = new mongoose.Schema({
                 }
 
                 datosUsuario = {
+                    _id: findUser._id,
                     name: findUser.name,
                     lastName: findUser.lastName,
                     age: findUser.age,
                     email: findUser.email, 
-                    cart: findUser.cart                   
+                    cart: findUser.cart,
+                    auth: findUser.authEmail                   
                 }
 
                 if (findUser.email == process.env.ADMIN_EMAIL) {
@@ -91,6 +95,10 @@ class usersDaoMongoose{
 
     async allPopulate(email){
         return await userManager.allPopulate(email)
+    }
+
+    async authEmail(id){
+        return await userManager.findOneAndUpdate({_id:id},{authEmail:true})
     }
 
 }

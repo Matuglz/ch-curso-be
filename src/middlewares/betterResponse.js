@@ -20,5 +20,8 @@ export function betterResponse(req, res, next) {
     res['bought']=()=>{
       res.status(201).json({status:'remove stock success'})
     }
+    res['authenticated']=()=>{
+      res.status(201).json({status:'success authenticated'})
+    }
     next()
   }

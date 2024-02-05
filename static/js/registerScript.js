@@ -18,9 +18,9 @@ form.addEventListener('submit', async (e)=>{
 
 
     if(res.status == 201){
-        alert(` ¡BIENVENIDO!`)
+        alert(` ¡BIENVENIDO! /n Se envio un correo a tu email para verificarlo!`)
         setTimeout(() => {
-            window.location.href = '/'
+            window.location.href = '/Login'
         }, 1000);
 
     }

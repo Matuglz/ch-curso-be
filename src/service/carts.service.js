@@ -10,8 +10,8 @@ class cartsServices{
         return await cartsDao.create({})
     }
 
-    async cartPopulate(user){
-        return await cartsDao.populateCart(user)
+    async cartPopulate(cartId){
+        return await cartsDao.populateCart(cartId)
     }
 
     async findCart(id){

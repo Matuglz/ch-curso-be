@@ -60,11 +60,11 @@ export const cartsManager = model('carts', cartsSchema)
 
 class cartsDaoMongoose {
     async create() {
-        return (await cartsManager.create({})).toObject()
+        return (await cartsManager.create({})).lean()
     }
 
-    async populateCart(user){
-        return await cartsManager.findOne(user.email).populate({path:'articles._id', model:'products'}).lean()
+    async populateCart(cartId){
+        return await cartsManager.findOne({_id:cartId}).populate({path:'articles._id', model:'products'}).lean()
     }
 
     async findCart(id) {
