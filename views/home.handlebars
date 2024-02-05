@@ -24,11 +24,40 @@
             <li class="page-item {{#if this.prevPage}}{{''}}{{else}}{{'disabled'}}{{/if}}">
                 <a class="page-link" href="/?limit={{limit}}&page={{prevPage}}">Previous</a>
             </li>
-            <li class="page-item">{{this.page}}<a class="page-link"></a>         
+            <li class="page-item">{{this.page}}<a class="page-link"></a>
             </li>
             <li class="page-item {{#if this.nextPage}}{{''}}{{else}}{{'disabled'}}{{/if}}">
-                <a class="page-link"  href="/?limit={{limit}}&page={{nextPage}}">Next</a>
+                <a class="page-link" href="/?limit={{limit}}&page={{nextPage}}">Next</a>
             </li>
         </ul>
     </nav>
 </section>
+
+{{!-- <script>
+    const addCartButtons = document.querySelectorAll('.btn-small')
+
+
+    async function getUser() {
+        const response = await fetch('/api/Login/current')
+        let data = await response.json()
+        return data.user
+    }
+
+    getUser().then((user) => {
+        
+            addCartButtons.forEach((b) => {
+                b.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    if(!user){
+                        alert('necesitas loguearte')
+                    }else{
+                        await fetch(`/api/carts/${user.cart._id}/product/${e.target.id}`, {
+                            method:'POST',
+                        })
+                    }
+                })
+            })
+        
+    })
+
+</script> --}}

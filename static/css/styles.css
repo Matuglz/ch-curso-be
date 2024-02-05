@@ -120,3 +120,9 @@ form{
 .nav-user ul li a:hover{
     color: red;
 }
+
+#ACart:hover{
+    cursor: pointer;
+    text-decoration-line:underline;
+    color: aqua;
+}

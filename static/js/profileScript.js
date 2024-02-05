@@ -1,16 +1,23 @@
 
 window.addEventListener('load', async () => {
   const response = await fetch('/api/Login/current')
-  if (response.status === 403) {
+  if (response.status === 401) {
     alert('debes loguearte para ver esta informacion!')
     return window.location.href = '/Login'
   }
 
-  const user = await response.json()
+  const data = await response.json()
+  const user = data.user
+  console.log(data.user);
+
 
   document.querySelector('#name').innerHTML = user.name
   document.querySelector('#email').innerHTML = user.email
   document.querySelector('#rol').innerHTML = user.rol
+  const cart = document.querySelector('#ACart')
+  cart.addEventListener('click', ()=>{
+    window.location.href = `/cart/${user.cart}`
+  })
 })
 
 

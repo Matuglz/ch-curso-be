@@ -2,14 +2,14 @@ import { Schema, model } from "mongoose"
 import { randomUUID } from 'node:crypto'
 
 function time() {
-    var date = new Date()
+    let date = new Date()
 
-    var day = date.getDate()
-    var month = date.getMonth() + 1
-    var year = date.getFullYear()
+    let day = date.getDate()
+    let month = date.getMonth() + 1
+    let year = date.getFullYear()
 
-    var hours = date.getHours()
-    var minutes = date.getMinutes()
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
 
 
     day = day < 10 ? '0' + day : day;

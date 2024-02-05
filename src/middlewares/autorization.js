@@ -1,12 +1,25 @@
 export function preLoginRule(req, res, next) {
   if (!req.isAuthenticated()) {
-    return res.status(403).json({ status: 'error', message: 'necesita iniciar sesion' })
+    return res.status(401).json({ status: 'error', message: 'necesita iniciar sesion' })
   }
   next()
 }
-// export function isLogin(req,res,next){
-//   if(req.isAuthenticated){
-//     return res.status(200).json({status: 'success', message: 'ya existe una sesion'})
-//   }
-//   next()
-// }
+
+export function loginRule(req, res, next) {
+    if (req.isAuthenticated()) {
+      return res.status(401).json({ status: 'error', message: 'ya iniciaste sesion' })
+    }
+    next()
+  }
+
+export function onlyAdmins(req,res,next){
+
+  if(!req.isAuthenticated()){
+    return res.status(401).json({ status: 'error', message: 'necesita iniciar sesion' })
+  }
+
+  if(req.user.rol !== 'Admin'){
+    return res.status(401).json({status:'error', message:'solo los admins pueden acceder a esta pagina'})
+  }
+  next()
+}

@@ -1,3 +1,13 @@
+window.addEventListener('load', async ()=>{
+    const res = await fetch('/createProduct/current')
+    if(res.status === 401){
+        const {message} = await res.json()
+        alert(message)
+        window.location.href = '/'
+    }
+})
+
+
 document.querySelector('#formCreate').addEventListener('submit', async (e) => {
     e.preventDefault();
 

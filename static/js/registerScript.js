@@ -1,5 +1,13 @@
 const form = document.querySelector('#RegisterForm')
 
+window.addEventListener('load', async()=>{
+    const res = await fetch('/api/Register')
+    if(res.status === 401){
+        alert('ya estas logeado')
+        return window.location.href = '/'
+    }
+})
+
 form.addEventListener('submit', async (e)=>{
     e.preventDefault()
     const res = await fetch('/api/Register',{

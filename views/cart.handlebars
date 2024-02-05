@@ -1,20 +1,20 @@
 <div class="cartContainer">
     <h2>Carrito de productos</h2>
-    <div class="prodContainer">
-        {{#each prods}}
-        <div class="productCard">
-            <img class="imgProd" src={{#if
-                this._id.thumbnail.[0]}}{{this._id.thumbnail.[0]}}{{else}}'../../static/img/default-product-img.png'{{/if}}>
-
-            <div>
-                <p>{{this._id.title}}</p>
-                <p>
-                    <button>-</button>
-                    <small>{{this.cantidad}}</small>
-                    <button>+</button>
-                </p>
+    <div id="Productos" class=" card-group row row-cols-3">
+        {{#each products}}
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src={{#if this._id.thumbnail.[0]}} {{this._id.thumbnail.[0]}}
+                    {{else}}'../../static/img/default-product-img.png' {{/if}} class="card-img-top" alt={{this._id.title}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{this._id.title}}</h5>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                    <small class="text-body-secondary">${{this._id.price}}</small><small class="text-body-secondary">unidades: {{this.cantidad}}</small>
+                </div>
             </div>
         </div>
         {{/each}}
     </div>
+            <button class="text-center btn btn-success">Comprar</button>
 </div>

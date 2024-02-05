@@ -2,8 +2,8 @@ import passport from 'passport'
 import { Strategy as localStrategy } from 'passport-local'
 import { Strategy as githubStrategy } from 'passport-github2'
 import { Strategy as googleStrategy } from 'passport-google-oauth20'
-import { userManager } from '../../db/mainDB.js';
 import { config as configDotenv } from "dotenv";
+import { usersService } from '../service/users.service.js';
 configDotenv()
 
 
@@ -11,7 +11,7 @@ passport.use('loginLocal', new localStrategy({
     usernameField: 'email'
 }, async function verificationCallback(username, password, done) {
     try {
-        const userData = await userManager.login(username, password)
+        const userData = await usersService.login(username, password)
         done(null, userData)
     }
     catch (error) {
@@ -34,8 +34,7 @@ passport.use('loginGithub', new githubStrategy({
 
         }
         console.log(body);
-        const user = await userManager.register(body)
-        console.log('registro exitoso');
+        const user = await usersService.register(body)
         done(null, profile)
     }
     catch (error) {
@@ -55,7 +54,7 @@ passport.use('loginGoogle', new googleStrategy({
             email: profile.emails[0].value,
             provider: profile.provider
         }
-        const user = await userManager.register(body)
+        const user = await usersService.register(body)
         console.log(user);
         done(null, profile)
     }

@@ -2,7 +2,7 @@
   "type": "module",
   "name": "curso-backend",
   "version": "1.0.0",
-  "main": "src/app.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon -e js,handlebars . "
