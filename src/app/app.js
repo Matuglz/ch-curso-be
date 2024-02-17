@@ -16,6 +16,7 @@ import { webProducts } from "../routers/products/webProducts.js"
 import { cartApi } from "../routers/cart/api/cartApi.js"
 import { webCarts } from "../routers/cart/webCart.js"
 import { betterErrors } from "../middlewares/betterError.js"
+import { mockRouter } from "../routers/mock/mock.router.js"
 
 
 export const app = express()
@@ -45,6 +46,7 @@ app.use('/api',apiUsers)
 app.use('/api', cartApi)
 app.use(webCarts)
 app.use(webRouter)
+app.use(mockRouter)
 
 
 app.use(betterErrors)

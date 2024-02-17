@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { usersService } from "../../service/users.service.js";
 import { cartsService } from "../../service/carts.service.js";
 
 
