@@ -17,7 +17,6 @@ export async function createProductController(req, res, next) {
 export async function deleteProductController(req, res, next) {
     try {
 
-        console.log('server', req.body);
         let id = req.body.id
         const productDeleted = await productsService.deleteProduct(id)
         res.deleted(productDeleted)

@@ -17,6 +17,8 @@ import { cartApi } from "../routers/cart/api/cartApi.js"
 import { webCarts } from "../routers/cart/webCart.js"
 import { betterErrors } from "../middlewares/betterError.js"
 import { mockRouter } from "../routers/mock/mock.router.js"
+import { httpLogger } from "../middlewares/httpLogger.js"
+import { winstonTest } from "../routers/winstonTest.js"
 
 
 export const app = express()
@@ -38,8 +40,10 @@ app.use(sessions)
 app.use(passportInitialize, passportSession)
 
 //FROM ME
+app.use(httpLogger)
 app.use(betterResponse)
 
+app.use(winstonTest)
 app.use(webProducts)
 app.use(crudProducts)
 app.use('/api',apiUsers)

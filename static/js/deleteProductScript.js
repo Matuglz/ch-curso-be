@@ -19,7 +19,5 @@ form.addEventListener('submit', async (e) => {
         body: new URLSearchParams(new FormData(form))
 
     })
-
-    console.log('send form');
 })
 

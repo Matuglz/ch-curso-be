@@ -9,7 +9,6 @@
         try {
             const res = await fetch('/api/Login/current')
             let data = await res.json()
-            console.log(data.user)
             const auth = await fetch(`/api/AuthEmail/${data.user._id}`)
             if (auth.status === 201) {
                 authDiv.innerHTML = 'Email verificado con exito'

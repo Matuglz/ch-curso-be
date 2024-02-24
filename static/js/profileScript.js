@@ -8,7 +8,6 @@ window.addEventListener('load', async () => {
 
   const data = await response.json()
   const user = data.user
-  console.log(data.user);
 
 
   document.querySelector('#name').innerHTML = user.name

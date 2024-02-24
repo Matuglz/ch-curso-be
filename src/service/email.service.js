@@ -22,7 +22,6 @@ class emailServices {
                 text: `http://localhost:8080/AuthEmail`
             }
             await this.transporter.sendMail(emailOptions)
-            console.log('email enviado');
         }catch(error){
             throw new Error(error)
         }

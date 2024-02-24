@@ -1,0 +1,34 @@
+{"level":"http","message":"[GET] / path: /mockingproducts"}
+{"level":"http","message":"[GET] / path: /mockingproducts"}
+{"level":"http","message":"[POST] / path: /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4b24a39d-8b39-4cf8-ab1a-2e4559dee214"}
+{"level":"http","message":"[GET] / path: /mockingproducts"}
+{"level":"http","message":"[GET] / path: /mockingproducts"}
+{"level":"http","message":"[GET] / path: /mockingproducts"}
+{"level":"http","message":"[GET] - path: /mockingproducts"}
+{"level":"http","message":"[GET] /mockingproducts"}
+{"level":"info","message":"[GET] /mockingproducts"}
+{"level":"info","message":"[GET] /mockingproducts"}
+{"level":"http","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /mockingproducts"}
+{"level":"http","message":"server runing on port 8080"}
+{"level":"http","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4b24a39d-8b39-4cf8-ab1a-2e4559dee21"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4b24a39d-8b39-4cf8-ab1a-2e4559dee21"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4b24a39d-8b39-4cf8-ab1a-2e4559dee21"}
+{"level":"warn","message":"[POST] - /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4b24a39d-8b39-4cf8-ab1a-2e4559dee21 - message: el producto con id 4b24a39d-8b39-4cf8-ab1a-2e4559dee21 no existe"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4b24a39d-8b39-4cf8-ab1a-2e4559dee214"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /loggerTest"}
+{"level":"error","message":"testing winston logger"}
+{"level":"warn","message":"testing winston logger"}
+{"level":"info","message":"testing winston logger"}
+{"level":"http","message":"testing winston logger"}
+{"level":"verbose","message":"testing winston logger"}
+{"level":"debug","message":"testing winston logger"}

@@ -83,7 +83,8 @@ export async function buyCartController(req, res, next) {
                 boughtProducts.push({ productId: product._id, quantity: product.quantity, price: product.price })
             }
             catch (error) {
-                console.log(error.message)
+                error.status = 400
+                next(error)
             }
         }
 

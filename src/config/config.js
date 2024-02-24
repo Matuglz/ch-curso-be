@@ -27,3 +27,10 @@ export const GOOGLE_AUTH_APP_CALLBACK_URL = process.env.GOOGLE_AUTH_APP_CALLBACK
 
 export const EMAIL_USER = process.env.EMAIL_USER
 export const EMAIL_PASS = process.env.EMAIL_PASS
+
+export const NODE_ENV = process.env.NODE_ENV
+
+export const loggerLevel = {
+    CONSOLE: NODE_ENV === 'production' ? 'info' : 'debug',
+    FILE: NODE_ENV === 'production' ? 'info' : 'debug'
+  }

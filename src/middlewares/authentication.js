@@ -33,7 +33,6 @@ passport.use('loginGithub', new githubStrategy({
             provider: profile.provider
 
         }
-        console.log(body);
         const user = await usersService.register(body)
         done(null, profile)
     }
@@ -55,7 +54,6 @@ passport.use('loginGoogle', new googleStrategy({
             provider: profile.provider
         }
         const user = await usersService.register(body)
-        console.log(user);
         done(null, profile)
     }
     catch (error) {
