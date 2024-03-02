@@ -49,7 +49,7 @@ export async function subirArchivo(req, newProduct) {
         await productsService.updateImgURL(newProduct._id, url)
     }
     catch (error) {
-        throw new error(error.message)
+        throw new Error(error.message)
     }
 }
 

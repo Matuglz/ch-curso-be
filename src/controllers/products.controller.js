@@ -4,6 +4,7 @@ import { productsService } from "../service/products.service.js";
 
 export async function createProductController(req, res, next) {
     try {
+        req.body.owner = req.user._id
         const newProduct = await productsService.createProduct(req.body)
         subirArchivo(req, newProduct)
         res.created(newProduct)
@@ -18,7 +19,7 @@ export async function deleteProductController(req, res, next) {
     try {
 
         let id = req.body.id
-        const productDeleted = await productsService.deleteProduct(id)
+        const productDeleted = await productsService.deleteProduct(id, req.user)
         res.deleted(productDeleted)
     } catch (error) {
         error.statusCode = 400
@@ -68,7 +69,7 @@ export async function updateProductsController(req, res, next) {
 
         }
         //SE ACTUALIZA EN LA BASE DE DATOS
-        const prodUpdated = await productsService.updateProduct(id, updateData)
+        const prodUpdated = await productsService.updateProduct(id, updateData, req.user)
         res.updated(prodUpdated)
     }
     catch (error) {

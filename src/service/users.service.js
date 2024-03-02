@@ -19,6 +19,22 @@ class usersServices{
     async authenticate(id){
         return await usersDao.authEmail(id)
     }
+
+    async changeRol(id){
+        return await usersDao.modifyRol(id)
+    }
+
+        async generateResetPwdToken(email){
+            return await usersDao.caca(email)
+        }
+
+    async validateToken(token, date){
+        return await usersDao.validateTokenAndDate(token, date)
+    }
+
+    async resetPassword(body,token){
+        return await usersDao.changePassword(body.password,token)
+    }
 }
 
 export const usersService = new usersServices()

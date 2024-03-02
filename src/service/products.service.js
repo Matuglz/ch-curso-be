@@ -21,12 +21,12 @@ class productsServices{
         return await productsDao.create(body)
     }
 
-    async deleteProduct(id){
-        return await productsDao.delete(id)
+    async deleteProduct(id,user){
+        return await productsDao.delete(id,user)
     }
 
-    async updateProduct(id, updateOptions){
-        return await productsDao.update(id, updateOptions)
+    async updateProduct(id, updateOptions,user){
+        return await productsDao.update(id, updateOptions,user)
     }
 
     async fetchProducts(filters,paginateOptions){

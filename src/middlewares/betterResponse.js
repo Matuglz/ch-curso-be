@@ -23,5 +23,8 @@ export function betterResponse(req, res, next) {
     res['authenticated']=()=>{
       res.status(201).json({status:'success authenticated'})
     }
+    res['EmailSent']=()=>{
+      res.status(201).json({status:'email success sent'})
+    }
     next()
   }

@@ -54,7 +54,7 @@ const cartsSchema = new Schema({
             }
         }
     }
-    )
+)
 cartsSchema.plugin(mongoosePaginate)
 export const cartsManager = model('carts', cartsSchema)
 
@@ -63,8 +63,8 @@ class cartsDaoMongoose {
         return (await cartsManager.create({})).lean()
     }
 
-    async populateCart(cartId){
-        return await cartsManager.findOne({_id:cartId}).populate({path:'articles._id', model:'products'}).lean()
+    async populateCart(cartId) {
+        return await cartsManager.findOne({ _id: cartId }).populate({ path: 'articles._id', model: 'products' }).lean()
     }
 
     async findCart(id) {
@@ -75,9 +75,19 @@ class cartsDaoMongoose {
         return await cartsManager.deleteOne({ _id: id }).lean()
     }
 
-    async addProduct(cartId, prod, cantidad) {
-        const cart = await cartsManager.findOne({ _id: cartId })
-        return await cart.addProducts(cartId, prod, cantidad)
+    async addProduct(cartId, prod, cantidad, user) {
+        try {
+            let product = await productsService.findProduct(prod)
+            if (product.owner === user._id) {
+                throw new Error('if you create the product cant add to your cart')
+            } else {
+                const cart = await cartsManager.findOne({ _id: cartId })
+                return await cart.addProducts(cartId, prod, cantidad)
+            }
+        }
+        catch (error) {
+            throw new Error(error.message)
+        }
     }
 
     async deleteProduct(cartId, prodId) {
@@ -89,13 +99,13 @@ class cartsDaoMongoose {
         }
     }
 
-    async delAllCartProducts(cartId){
-       const cart = await cartsManager.findOne({_id: cartId})
-       if(cart){
-        await cartsManager.updateOne({ _id: cartId }, { $set: { articles: [] } })
-       }else{
-        throw new Error(`cart with id ${cartId} dont exist`)
-       }
+    async delAllCartProducts(cartId) {
+        const cart = await cartsManager.findOne({ _id: cartId })
+        if (cart) {
+            await cartsManager.updateOne({ _id: cartId }, { $set: { articles: [] } })
+        } else {
+            throw new Error(`cart with id ${cartId} dont exist`)
+        }
     }
 }
 

@@ -12,7 +12,8 @@ const productSchema = new Schema({
     thumbnail: { type: Array, default: [] },
     code: { type: String, required: true, unique: true },
     stock: { type: Number, required: true },
-    status: { type: Boolean, default: true }
+    status: { type: Boolean, default: true },
+    owner: { type: String, default: 'admin' }
 },
     {
         strict: 'throw',
@@ -25,26 +26,26 @@ const productsManager = model('products', productSchema)
 class productsDaoMongoose {
 
     async substractStock(cartId, prodId, quantity) {
-        
+
         try {
             const product = await productsManager.findById(prodId)
 
 
-            if(product.stock < quantity){
+            if (product.stock < quantity) {
                 throw new Error(`There is not enough stock of ${product.title}`)
             }
 
             const newStock = product.stock - quantity
 
             const updateProduct = await productsManager.findOneAndUpdate(
-                {_id:prodId},
-                {stock:newStock},
-                {new:true}).lean()
+                { _id: prodId },
+                { stock: newStock },
+                { new: true }).lean()
 
-                await cartsService.deleteProductFromCart(cartId, prodId)
-                updateProduct.quantity = quantity
+            await cartsService.deleteProductFromCart(cartId, prodId)
+            updateProduct.quantity = quantity
             return updateProduct
-        } catch (error){
+        } catch (error) {
             throw new Error(error.message)
         }
     }
@@ -78,19 +79,29 @@ class productsDaoMongoose {
         }
     }
 
-    async delete(id) {
+    async delete(id, user) {
         try {
-            return await productsManager.deleteOne({ _id: id })
-        } catch {
-            throw new Error('fail to delete the product')
+            let findProduct = await productsManager.findOne({ _id: id })
+            if (findProduct.owner === user._id || user.rol === "admin") {
+                return await productsManager.deleteOne({ _id: id })
+            } else {
+                throw new Error('only the user who create the product can delete or an admin')
+            }
+        } catch(error) {
+            throw new Error(error.message)
         }
     }
 
-    async update(id, body) {
+    async update(id, body, user) {
         try {
-            return await productsManager.findByIdAndUpdate(id, body, { new: true, runValidators: true })
-        } catch {
-            throw new Error('fail to update the product')
+            const findProduct = await productsManager.findOne({_id : id})
+            if(findProduct.owner !== user._id || user.rol !== 'admin'){
+                throw new Error('only the user who create the product can update or an admin')
+            }else{
+                return await productsManager.findByIdAndUpdate(id, body, { new: true, runValidators: true })
+            }
+        } catch(error){
+            throw new Error(error.message)
         }
     }
 

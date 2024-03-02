@@ -32,3 +32,71 @@
 {"level":"http","message":"testing winston logger"}
 {"level":"verbose","message":"testing winston logger"}
 {"level":"debug","message":"testing winston logger"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/createProduct"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /deleteProduct/4ac50cc8-cdb9-48c4-a465-16f151fdaf3c"}
+{"level":"info","message":"[DELETE] /deleteProduct"}
+{"level":"warn","message":"[DELETE] - /deleteProduct - message: fail to delete the product"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /deleteProduct"}
+{"level":"warn","message":"[DELETE] - /deleteProduct - message: only the user who create the product can delete or an admin"}
+{"level":"info","message":"[DELETE] /deleteProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/a86537a8-20bc-46de-bd2f-b92a00043408"}
+{"level":"warn","message":"[POST] - /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/a86537a8-20bc-46de-bd2f-b92a00043408 - message: if you create the product cant add to your cart"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/a86537a8-20bc-46de-bd2f-b92a00043408"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f"}
+{"level":"info","message":"[POST] /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"warn","message":"[POST] - /api/forgotPassword - message: usersDao.findByEmail is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/resetPassword/9ee64fef-1e1e-44c2-a472-cbffbd124fff"}
+{"level":"info","message":"[GET] /api/resetPassword/9ee64fef-1e1e-44c2-a472-cbffbd124fff"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/resetPassword/9ee64fef-1e1e-44c2-a472-cbffbd124fff"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/resetPassword/9ee64fef-1e1e-44c2-a472-cbffbd124fff"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword/9ee64fef-1e1e-44c2-a472-cbffbd124fff"}
+{"level":"warn","message":"[POST] - /api/forgotPassword/9ee64fef-1e1e-44c2-a472-cbffbd124fff - message: token is invalid or expire"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"warn","message":"[POST] - /api/forgotPassword - message: res.ErrormailSent is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"warn","message":"[POST] - /api/forgotPassword - message: res.ErrormailSent is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"info","message":"[POST] /api/ForgotPassword/05e26068-c5d6-4c05-99a4-bfb0c84209ed"}
+{"level":"warn","message":"[POST] - /api/ForgotPassword/05e26068-c5d6-4c05-99a4-bfb0c84209ed - message: token is invalid or expire"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/ForgotPassword/05e26068-c5d6-4c05-99a4-bfb0c84209ed"}
+{"level":"warn","message":"[POST] - /api/ForgotPassword/05e26068-c5d6-4c05-99a4-bfb0c84209ed - message: token is invalid or expire"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"warn","message":"[POST] - /api/forgotPassword - message: emailService is not defined"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/forgotPassword"}
+{"level":"info","message":"[POST] /api/ForgotPassword/5d71b2a3-35f7-4e22-9bc4-7eae2ad1a490"}

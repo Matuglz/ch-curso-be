@@ -30,9 +30,9 @@ export async function getCarts(req, res, next) {
 //AGREGAR PRODUCTOS AL CARRITO
 export async function addProductsToCart(req, res, next) {
     try {
-        const cartId = req.params.cid
-        const product = req.params.pid
-        const cart = await cartsService.addProductToCart(cartId, product, 1)
+        let cartId = req.params.cid
+        let product = req.params.pid
+        const cart = await cartsService.addProductToCart(cartId, product, 1, req.user)
         res.result(cart)
     }
     catch (error) {

@@ -22,8 +22,8 @@ class cartsServices{
         return await cartsDao.deleteCart(id)
     }
 
-    async addProductToCart(cartId, prod, cantidad){
-        return await cartsDao.addProduct(cartId, prod, cantidad)
+    async addProductToCart(cartId, prod, cantidad, user){
+        return await cartsDao.addProduct(cartId, prod, cantidad,user)
     }
 
     async deleteProductFromCart(cartId, prodId){
