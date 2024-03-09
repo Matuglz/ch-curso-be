@@ -1,0 +1,38 @@
+components:
+  schemas:
+    user:
+      type: object
+      properties:
+        _id:  
+          type: String
+        email:  
+          type: String
+        authEmail:  
+          type: Boolean
+        password:  
+          type: String 
+        age:  
+          type: Number 
+        name:  
+          type: String
+        lastName:  
+          type: String 
+        provider:  
+          type: String
+        cart:  
+          type: String
+        rol:  
+          type: String
+          
+      example: 
+        _id: da6c2f7c-2357-4c28-a822-aed54e945df8
+        email: prueba123@gmail.com
+        password: 123Prueba
+        age: 100
+        name: prueba
+        lastName: abc
+        provider: Local
+        cart: fe189d1c-3b28-42ca-bac6-84fc78fbdf4a
+        rol: user
+
+

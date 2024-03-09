@@ -1,0 +1,20 @@
+components:
+  schemas:
+    carts:
+      type: object
+      properties:
+        _id:
+          type: String
+        articles: 
+          type: Array
+        
+      example: 
+        _id: 7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e
+        articles:
+          - _id: d303dbae-3c92-4028-baea-e12cc92425af
+            cantidad: 2
+          - _id: a86537a8-20bc-46de-bd2f-b92a00043408
+            cantidad: 2
+          - _id: 4b24a39d-8b39-4cf8-ab1a-2e4559dee214
+            cantidad: 3
+

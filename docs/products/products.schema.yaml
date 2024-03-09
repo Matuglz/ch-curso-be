@@ -1,0 +1,35 @@
+components:
+  schemas:
+    products:
+      type: object
+      properties:
+        _id:  
+          type: String
+        title:  
+          type: String
+        description:  
+          type: String
+        price:  
+          type: Number
+        thumbnail:  
+          type: Array
+        code:  
+          type: String
+        stock:  
+          type: Number
+        status:  
+          type: Boolean
+        owner:  
+          type: String
+
+      example:
+        _id: 68779afb-5074-49a4-a6fa-c836030fa459
+        title: axe bzrp
+        description: nuevo rexona maxima duracion 34 hs
+        price: 3434
+        thumbnail:
+          - https://productos-be-coderhouse.s3.sa-east-1.amazonaws.com/68779afb-5074-49a4-a6fa-c836030fa459/1
+        code: q2313
+        stock: 45
+        status: true
+        owner: 30373629-a145-4d28-b8ea-e8c7389e3a9a

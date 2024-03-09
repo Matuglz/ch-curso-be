@@ -1,0 +1,92 @@
+paths:
+  /api/users/login/current:
+    get:
+      summary: return the user data
+    delete:
+      summary: delete the login cookie and logout the user
+  
+  /api/users/login:
+    post:
+      summary: this endpoint create the login cookie with user data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email: string
+                password: string
+              example: {email: prueba@gmail.com, password: 123abc}
+      responses:
+        "200":
+          description: "user successfully loged"
+
+
+api/users/register:
+  post:
+    summary: This endpoint is to create users.
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              _id:
+                type: string
+              email:
+                type: string
+              authEmail:
+                type: boolean
+              password:
+                type: string
+              age:
+                type: number
+              name:
+                type: string
+              lastName:
+                type: string
+              provider:
+                type: string
+              cart:
+                type: string
+              rol:
+                type: string
+    responses:
+      "201":
+        description: user created successfully
+        content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    default: success
+                  payload:
+                    default: array
+                    example:  
+                      _id: da6c2f7c-2357-4c28-a822-aed54e945df8
+                      email: prueba123@gmail.com
+                      password: 123Prueba
+                      age: 100
+                      name: prueba
+                      lastName: abc
+                      provider: Local
+                      cart: fe189d1c-3b28-42ca-bac6-84fc78fbdf4a
+                      rol: user
+
+
+  api/users/premium/:uid:
+    post:
+      summary: this endpoint recive the user id and upgrade him to premium
+
+  api/users/authEmail/:uid:
+      post:
+        summary: this endpoint recive the user id and confirm that the email is validated
+
+  api/users/forgotPassword:
+      post:
+        summary: this endpoint is to reset the user password, we send an email with the token and this token have an expires of one day (24hs) to change the password. if the user doesn't logged the endpoint doesn't work
+

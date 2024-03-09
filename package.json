@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon -e js,handlebars . "
+    "dev": "nodemon -e js,handlebars,yaml . "
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,8 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "socket.io": "^4.7.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "sweetalert2": "^11.10.0",
     "winston": "^3.11.0"
   }

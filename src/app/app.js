@@ -8,6 +8,9 @@ import handlebars from 'express-handlebars'
 import { sessions } from "../middlewares/sessions.js"
 import { passportInitialize, passportSession } from "../middlewares/authentication.js"
 
+import swaggerUiExpress from 'swagger-ui-express'
+import { swaggerOptions } from "../utils/swagger.js"
+
 import { webRouter } from "../routers/users/webRouter.js"
 import { apiUsers } from "../routers/users/api/apiUsers.js"
 import { betterResponse } from "../middlewares/betterResponse.js"
@@ -19,6 +22,7 @@ import { betterErrors } from "../middlewares/betterError.js"
 import { mockRouter } from "../routers/mock/mock.router.js"
 import { httpLogger } from "../middlewares/httpLogger.js"
 import { winstonTest } from "../routers/winstonTest.js"
+
 
 
 export const app = express()
@@ -51,6 +55,7 @@ app.use('/api', cartApi)
 app.use(webCarts)
 app.use(webRouter)
 app.use(mockRouter)
+app.use('/api-docs',swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerOptions) )
 
 
 app.use(betterErrors)

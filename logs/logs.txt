@@ -100,3 +100,220 @@
 {"level":"info","message":"server runing on port 8080"}
 {"level":"info","message":"[POST] /api/forgotPassword"}
 {"level":"info","message":"[POST] /api/ForgotPassword/5d71b2a3-35f7-4e22-9bc4-7eae2ad1a490"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-doc"}
+{"level":"info","message":"[GET] /api-docs"}
+{"level":"info","message":"[GET] /swagger-ui.css"}
+{"level":"info","message":"[GET] /swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /swagger-ui-init.js"}
+{"level":"info","message":"[GET] /favicon-32x32.png"}
+{"level":"info","message":"[GET] /favicon-16x16.png"}
+{"level":"info","message":"[GET] /swagger-ui.css"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs"}
+{"level":"info","message":"[GET] /swagger-ui.css"}
+{"level":"info","message":"[GET] /swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /swagger-ui-init.js"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css.map"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api-docs/"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
