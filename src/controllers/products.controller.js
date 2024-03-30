@@ -1,4 +1,3 @@
-import { subirArchivo } from "../functions/awsFunctions.js";
 import { validate } from "../functions/utils.js";
 import { productsService } from "../service/products.service.js";
 
@@ -6,7 +5,6 @@ export async function createProductController(req, res, next) {
     try {
         req.body.owner = req.user._id
         const newProduct = await productsService.createProduct(req.body)
-        subirArchivo(req, newProduct)
         res.created(newProduct)
     } catch (error) {
         error.statusCode = 400

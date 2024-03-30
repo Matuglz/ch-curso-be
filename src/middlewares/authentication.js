@@ -12,6 +12,7 @@ passport.use('loginLocal', new localStrategy({
 }, async function verificationCallback(username, password, done) {
     try {
         const userData = await usersService.login(username, password)
+        await usersService.lastConnection(userData, new Date().toString())
         done(null, userData)
     }
     catch (error) {

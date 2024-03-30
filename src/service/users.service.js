@@ -35,6 +35,14 @@ class usersServices{
     async resetPassword(body,token){
         return await usersDao.changePassword(body.password,token)
     }
+
+    async lastConnection(user, date){
+        return await usersDao.updateConnection(user, date)
+    }
+
+    async updateFile(uid, type, url){
+        return await usersDao.newFile(uid, type, url)
+    }
 }
 
 export const usersService = new usersServices()

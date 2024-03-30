@@ -17,6 +17,12 @@ const userSchema = new mongoose.Schema({
     provider: { type: String, default: 'Local' },
     cart: { type: String, ref: 'carts', required: true },
     rol: { type: String, default: 'user' },
+    documents: [{
+        _id:{type: String, default: randomUUID},
+        name:{type:String, required:true},
+        url:{type:String, required: true}
+    }],
+    last_connection:{type: String},
     resetPasswordToken:{type:String},
     resetPasswordExpires:{type:String}
 
@@ -84,14 +90,28 @@ const userSchema = new mongoose.Schema({
                     if (!findUser) {
                         throw new Error(`user doesn't exist`)
                     }
-
-                    if (findUser.rol === 'premium') {
-                        await mongoose.model(collection).findOneAndUpdate({ _id: id }, { $set: { rol: 'user' } })
+                    if (!findUser.documents.some(doc => doc.name === 'address') || !findUser.documents.some(doc => doc.name === 'identification')){
+                        throw new Error('you need complete the documentation to update to premium')
                     }
+
+                    // if (findUser.rol === 'premium') {
+                    //     await mongoose.model(collection).findOneAndUpdate({ _id: id }, { $set: { rol: 'user' } })
+                    // }
                     if (findUser.rol === 'user') {
                         await mongoose.model(collection).findOneAndUpdate({ _id: id }, { $set: { rol: 'premium' } })
                     }
                 } catch (error) {
+                    throw new Error(error.message)
+                }
+            },
+            updateConnection: async function(user, date){
+                try{
+                    if(!user){
+                        throw new Error(`user isn't logged`)
+                    }
+                   await mongoose.model(collection).findOneAndUpdate({email:user.email}, {$set:{last_connection:date}})
+                }
+                catch(error){
                     throw new Error(error.message)
                 }
             }
@@ -153,6 +173,18 @@ class usersDaoMongoose {
 
     async changePassword(password, token) {
         await userManager.findOneAndUpdate({ resetPasswordToken: token }, { $set: { password: hashPassword(password) } })
+    }
+
+    async updateConnection(user, date){
+        await userManager.updateConnection(user, date)
+    }
+
+    async newFile(uid, type, url){
+
+        await userManager.findOneAndUpdate({_id : uid}, {$push:{documents:{
+            name:type,
+            url:url
+        }}})
     }
 
 }

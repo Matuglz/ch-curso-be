@@ -3,7 +3,7 @@ import { usersService } from "../../../service/users.service.js";
 
 export const premiumUserRouter = Router()
 
-premiumUserRouter.post('/:uid', async(req, res)=>{
+premiumUserRouter.post('/:uid', async(req, res,next)=>{
    try{ 
     let id = req.params.uid
     await usersService.changeRol(id)

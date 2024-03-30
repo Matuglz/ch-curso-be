@@ -16,12 +16,13 @@ export async function registerController(req, res, next) {
 
 
 export async function logOutController(req, res, next) {
-
-    req.session.destroy(err => {
-        err.statusCode = 400
-        next(err)
-        res.logout()
-    })
+   try{ await usersService.lastConnection(req.user, new Date().toString())
+    req.session.destroy()
+        res.logout()}
+        catch(error){
+            error.statusCode = 400
+            next(error)
+        }
 }
 
 export async function profileController(req, res, next) {
@@ -54,4 +55,13 @@ export function loginController(req, res, next) {
             res.loged(req.user);
         });
     })(req, res, next);
+}
+
+export async function usersRouter(req,res,next){
+    try{const uid = req.params.uid
+    await usersService.updateFile(uid,req.file.filename.substring(0,req.file.filename.lastIndexOf('.')), `/static/${req.body.type}/` + req.file.filename)
+}catch(error){
+    error.statusCode = 400
+    next(error)
+}
 }

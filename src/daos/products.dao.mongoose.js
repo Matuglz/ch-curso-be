@@ -16,7 +16,7 @@ const productSchema = new Schema({
     owner: { type: String, default: 'admin' }
 },
     {
-        strict: 'throw',
+        strict: false,
         versionKey: false,
 
     })
@@ -73,9 +73,9 @@ class productsDaoMongoose {
 
     async create(body) {
         try {
-            return (await productsManager.create(body)).toObject()
+            return await productsManager.create(body)
         } catch (error) {
-            throw new Error('fail to create the product', error.message)
+            throw new Error(error.message)
         }
     }
 

@@ -27,6 +27,7 @@ import { winstonTest } from "../routers/winstonTest.js"
 
 export const app = express()
 
+
 //CONNECT DATABASE MONGODB ATLAS
 await mongoose.connect(MONGODB_ATLAS_ACCESS_STRING)
 

@@ -317,3 +317,262 @@
 {"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js"}
 {"level":"info","message":"[GET] /api-docs/swagger-ui-init.js"}
 {"level":"info","message":"[GET] /api-docs/favicon-32x32.png"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"warn","message":"[POST] - /api/Login - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"warn","message":"[POST] - /api/Login - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"warn","message":"[POST] - /api/Login - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"warn","message":"[POST] - /api/Login - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"warn","message":"[POST] - /api/Login - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Users//ForgotPassword"}
+{"level":"info","message":"[POST] /api/Users/ForgotPassword"}
+{"level":"warn","message":"[POST] - /api/Users/ForgotPassword - message: Unexpected token } in JSON at position 52"}
+{"level":"info","message":"[POST] /api/Users/ForgotPassword"}
+{"level":"info","message":"[POST] /api/Users/ForgotPassword"}
+{"level":"info","message":"[POST] /api/Users/ForgotPassword"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/ForgotPassword"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users/forgotPassword"}
+{"level":"info","message":"[POST] /api/users/forgotPassword"}
+{"level":"info","message":"[POST] /api/users/ForgotPassword"}
+{"level":"info","message":"[POST] /api/Users/ForgotPassword"}
+{"level":"info","message":"[POST] /Api/Users/ForgotPassword"}
+{"level":"info","message":"[POST] /api/ForgotPassword"}
+{"level":"info","message":"[GET] /api/ForgotPassword/0dc218d6-7495-4b5c-a914-f2a64b85963a"}
+{"level":"info","message":"[POST] /api/ForgotPassword/0dc218d6-7495-4b5c-a914-f2a64b85963a"}
+{"level":"info","message":"[POST] /api/users/login"}
+{"level":"info","message":"[POST] /api/Users/Login"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/Login/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/Login/current"}
+{"level":"warn","message":"[DELETE] - /api/Login/current - message: Cannot set properties of null (setting 'statusCode')"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/Login/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/Login/current"}
+{"level":"warn","message":"[DELETE] - /api/Login/current - message: user isn't logged"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[DELETE] /api/Login/current"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[DELETE] /api/Login/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/lo"}
+{"level":"info","message":"[POST] /api/login"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[GET] /favicon.ico"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Login"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: ENOENT: no such file or directory, open 'C:\\static\\img\\products\\a3434\\a3434'"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: fail to create the product"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: StrictModeError: Field `img` is not in schema and strict mode is set to throw."}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: products validation failed: title: Path `title` is required."}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"warn","message":"[POST] - /createProduct - message: E11000 duplicate key error collection: ecommerce.products index: code_1 dup key: { code: \"sad213\" }"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /"}
+{"level":"info","message":"[POST] /"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /caca"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createPr"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"[GET] /createProduct"}
+{"level":"info","message":"[GET] /createProduct/current"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /createProduct"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"[GET] /static/document/1711820224808-615159717.docx"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: Unexpected field"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: Unexpected field"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: Unexpected field"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: filename is not defined"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"warn","message":"[POST] - /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents - message: filename is not defined"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"[POST] /api/Users/30373629-a145-4d28-b8ea-e8c7389e3a9a/documents"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f"}
+{"level":"warn","message":"[POST] - /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f - message: you need complete the documentation to update to premium"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f"}
+{"level":"warn","message":"[POST] - /api/Premium/1d0dab36-2c29-4a0f-af7c-ec4d36b9144f - message: you need complete the documentation to update to premium"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
+{"level":"warn","message":"[POST] - /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a - message: you need complete the documentation to update to premium"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
+{"level":"warn","message":"[POST] - /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a - message: you need complete the documentation to update to premium"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
+{"level":"warn","message":"[POST] - /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a - message: you need complete the documentation to update to premium"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
+{"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
+{"level":"warn","message":"[POST] - /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a - message: you need complete the documentation to update to premium"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
