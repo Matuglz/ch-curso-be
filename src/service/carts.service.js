@@ -33,6 +33,13 @@ class cartsServices{
     async deleteAllCartProducts(cartId){
         return await cartsDao.delAllCartProducts(cartId)
     }
+
+    async incQuantity(cartId, prodId){
+        return await cartsDao.addProductQuantity(cartId, prodId)
+    }
+    async lessQuantity(cartId, prodId){
+        return await cartsDao.lessProductQuantity(cartId, prodId)
+    }
 }
 
 export const cartsService = new cartsServices()

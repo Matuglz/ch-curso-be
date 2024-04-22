@@ -1,18 +1,18 @@
 import { Router } from "express";
-import { registerRouter } from "./registerRouter.js";
-import { loginRouter } from "./loginRouter.js";
+import { sessionsRouter } from "./sessionsRouter.js";
 import { authRouter } from "./authRouter.js";
 import { premiumUserRouter } from "./premiumUserRouter.js";
 import { forgotPassword } from "./forgotPassword.js";
 import { upload } from "../../../config/multer.config.js";
-import { usersRouter } from "../../../controllers/users.controller.js";
+import { usersDocsRouter } from "../../../controllers/users.controller.js";
+import {usersRouter} from './usersRouter.js'
 
 
 export const apiUsers = Router()
 
-apiUsers.use('/Users/:uid/documents',upload.single('file'), usersRouter)
-apiUsers.use('/Register',registerRouter)
-apiUsers.use('/Login', loginRouter)
+apiUsers.use('/Users',usersRouter)
+apiUsers.use('/Sessions', sessionsRouter)
 apiUsers.use('/AuthEmail', authRouter)
 apiUsers.use('/Premium', premiumUserRouter)
 apiUsers.use('/ForgotPassword', forgotPassword)
+apiUsers.use('/Users/:uid/documents',upload.single('file'), usersDocsRouter)

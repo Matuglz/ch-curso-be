@@ -60,7 +60,7 @@ export const cartsManager = model('carts', cartsSchema)
 
 class cartsDaoMongoose {
     async create() {
-        return (await cartsManager.create({})).lean()
+        return (await cartsManager.create({}))
     }
 
     async populateCart(cartId) {
@@ -107,7 +107,48 @@ class cartsDaoMongoose {
             throw new Error(`cart with id ${cartId} dont exist`)
         }
     }
+
+    async addProductQuantity(cartId, prodId){
+        {let cart = await cartsManager.findOne({_id:cartId})
+            if(!cart){
+                throw new Error ('this cart doesnt exist')
+            }else{
+                let prod = await productsService.findProduct(prodId)
+                    if(!prod){
+                        throw new Error('this product doesnt exist')
+                    }
+            }
+        
+       await cartsManager.updateOne(
+            {_id: cartId, 'articles._id': prodId},
+            {$inc:{'articles.$.cantidad': 1}}
+        )
+    }}
+
+    async lessProductQuantity(cartId, prodId){
+        {let cart = await cartsManager.findOne({_id:cartId})
+            if(!cart){
+                throw new Error ('this cart doesnt exist')
+            }else{
+                let prod = await productsService.findProduct(prodId)
+                    if(!prod){
+                        throw new Error('this product doesnt exist')
+                    }
+            }
+            
+        let cartProd = cart.articles.find(a => a._id === prodId)
+
+        if(cartProd.cantidad === 1){
+            (await getCartsDao()).deleteProduct(cartId, prodId)
+        }else{
+            await cartsManager.updateOne(
+                {_id: cartId, 'articles._id': prodId},
+                {$inc:{'articles.$.cantidad': -1}}
+            )
+        }
+    }}
 }
+
 
 
 export async function getCartsDao() {

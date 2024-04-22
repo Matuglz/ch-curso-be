@@ -5,10 +5,10 @@ import { preLoginRule } from "../../../middlewares/autorization.js";
 
 export const authRouter = Router()
 
-authRouter.get('/:uid',preLoginRule, async (req, res,next) => {
+authRouter.get('/:uem',preLoginRule, async (req, res,next) => {
     try {
-        const userId = req.params.uid
-        await usersService.authenticate(userId)
+        const userEm = req.params.uid
+        await usersService.authenticate(userEm)
         req.user.auth = true
         res.authenticated()
     } catch (error) {

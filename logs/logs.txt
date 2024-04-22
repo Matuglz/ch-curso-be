@@ -576,3 +576,431 @@
 {"level":"warn","message":"[POST] - /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a - message: you need complete the documentation to update to premium"}
 {"level":"info","message":"server runing on port 8080"}
 {"level":"info","message":"[POST] /api/Premium/30373629-a145-4d28-b8ea-e8c7389e3a9a"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /favicon.ico"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /static/js/loginScipt.js"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /static/js/loginScipt.js"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Login"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Login"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Login"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"warn","message":"[GET] - /api/Users - message: usersService.allUsersInfo is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"warn","message":"[GET] - /api/Users - message: usersDao.getUsers is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /favicon.ico"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Login"}
+{"level":"info","message":"[POST] /api/Login"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[POST] /api/carts/undefined/product/68779afb-5074-49a4-a6fa-c836030fa459"}
+{"level":"warn","message":"[POST] - /api/carts/undefined/product/68779afb-5074-49a4-a6fa-c836030fa459 - message: if you create the product cant add to your cart"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[POST] /api/carts/undefined/product/70eca619-b77f-4f14-855d-399dc1fa45d8"}
+{"level":"warn","message":"[POST] - /api/carts/undefined/product/70eca619-b77f-4f14-855d-399dc1fa45d8 - message: Cannot read properties of null (reading 'addProducts')"}
+{"level":"info","message":"[POST] /api/carts/undefined/product/d303dbae-3c92-4028-baea-e12cc92425af"}
+{"level":"warn","message":"[POST] - /api/carts/undefined/product/d303dbae-3c92-4028-baea-e12cc92425af - message: Cannot read properties of null (reading 'addProducts')"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[POST] /api/carts/undefined/product/70eca619-b77f-4f14-855d-399dc1fa45d8"}
+{"level":"warn","message":"[POST] - /api/carts/undefined/product/70eca619-b77f-4f14-855d-399dc1fa45d8 - message: Cannot read properties of null (reading 'addProducts')"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/70eca619-b77f-4f14-855d-399dc1fa45d8"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/d303dbae-3c92-4028-baea-e12cc92425af"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/d303dbae-3c92-4028-baea-e12cc92425af"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/c05a3872-5ade-4e09-8c14-b69cacfdc080"}
+{"level":"warn","message":"[POST] - /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/c05a3872-5ade-4e09-8c14-b69cacfdc080 - message: if you create the product cant add to your cart"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/4ac50cc8-cdb9-48c4-a465-16f151fdaf3c"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Login/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/products"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/products"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/products"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: this product doesnt exist"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: this product doesnt exist"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: this product doesnt exist"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: this product doesnt exist"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: this product doesnt exist"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: this product doesnt exist"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"warn","message":"[PUT] - /api/carts/current - message: Unexpected token o in JSON at position 1"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[DELETE] /api/Sessions/Current"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"warn","message":"[POST] - /api/Sessions - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"warn","message":"[POST] - /api/Sessions - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"warn","message":"[POST] - /api/Sessions - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"warn","message":"[POST] - /api/Sessions - message: Contraseña incorrecta"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"warn","message":"[POST] - /api/Sessions - message: Contraseña incorrecta"}
+{"level":"info","message":"[GET] /Register"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"[GET] /Register"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: body is not defined"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: (intermediate value).lean is not a function"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: ValidationError: cart: Path `cart` is required."}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"warn","message":"[POST] - /api/Users - message: ReferenceError: dnjkasbndjksabdjksa is not defined"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[GET] /Register"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[GET] /Register"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[DELETE] /api/users/caca"}
+{"level":"info","message":"[GET] /Register"}
+{"level":"info","message":"[GET] /api/Users"}
+{"level":"info","message":"[POST] /api/Users"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /favicon.ico"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/c05a3872-5ade-4e09-8c14-b69cacfdc080"}
+{"level":"warn","message":"[POST] - /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/c05a3872-5ade-4e09-8c14-b69cacfdc080 - message: if you create the product cant add to your cart"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/product/70eca619-b77f-4f14-855d-399dc1fa45d8"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/purchase"}
+{"level":"warn","message":"[POST] - /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/purchase - message: There is not enough stock of afeitadora gillette"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/purchase"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /Login"}
+{"level":"info","message":"[GET] /api/Sessions"}
+{"level":"info","message":"[POST] /api/Sessions"}
+{"level":"info","message":"[GET] /Profile"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[PUT] /api/carts/current"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/purchase"}
+{"level":"info","message":"[POST] /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/purchase"}
+{"level":"warn","message":"[POST] - /api/carts/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e/purchase - message: dont have articles to buy"}
+{"level":"info","message":"[GET] /cart/7ec55bd4-8cf3-4da0-b773-67f4dbca8d1e"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[POST] /api/premium/matiasnahuelgonzalez01@gmail.com"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[POST] /api/premium/matiasnahuelgonzalez01@gmail.com"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[DELETE] /api/api/deleteUser/maty.capo01@gmail.com"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[DELETE] /api/api/DeleteUser/maty.capo01@gmail.com"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[GET] /"}
+{"level":"info","message":"[GET] /api/Sessions/current"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[DELETE] /users/DeleteUser/maty.capo01@gmail.com"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[DELETE] /api/api/Users/DeleteUser/maty.capo01@gmail.com"}
+{"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"[DELETE] /api/Users/DeleteUser/maty.capo01@gmail.com"}
+{"level":"info","message":"[GET] /api/users"}
+{"level":"info","message":"server runing on port 8080"}

@@ -21,7 +21,7 @@ import { webCarts } from "../routers/cart/webCart.js"
 import { betterErrors } from "../middlewares/betterError.js"
 import { mockRouter } from "../routers/mock/mock.router.js"
 import { httpLogger } from "../middlewares/httpLogger.js"
-import { winstonTest } from "../routers/winstonTest.js"
+
 
 
 
@@ -47,8 +47,6 @@ app.use(passportInitialize, passportSession)
 //FROM ME
 app.use(httpLogger)
 app.use(betterResponse)
-
-app.use(winstonTest)
 app.use(webProducts)
 app.use(crudProducts)
 app.use('/api',apiUsers)

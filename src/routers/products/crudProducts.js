@@ -1,10 +1,11 @@
 import { Router } from "express"
-import { createProductController, deleteProductController, updateProductsController } from "../../controllers/products.controller.js"
+import { createProductController, deleteProductController, updateProductsController,getProductsController } from "../../controllers/products.controller.js"
 import { onlyAdmins } from "../../middlewares/autorization.js"
 
 
 export const crudProducts = Router()
 
+crudProducts.get('/api/products', getProductsController)
 
 crudProducts.post('/createProduct',onlyAdmins, createProductController)
 crudProducts.get('/createProduct/current', onlyAdmins)

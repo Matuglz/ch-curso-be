@@ -1,6 +1,6 @@
 
 window.addEventListener('load', async () => {
-  const response = await fetch('/api/Login/current')
+  const response = await fetch('/api/Sessions/current')
   if (response.status === 401) {
     alert('debes loguearte para ver esta informacion!')
     return window.location.href = '/Login'
@@ -31,7 +31,7 @@ const form = document.querySelector('#FormLogOut')
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
 
-  const response = await fetch('/api/Login/Current', {
+  const response = await fetch('/api/Sessions/Current', {
     method: 'DELETE'
   })
 

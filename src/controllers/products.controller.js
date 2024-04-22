@@ -1,5 +1,7 @@
 import { validate } from "../functions/utils.js";
+import { emailService } from "../service/email.service.js";
 import { productsService } from "../service/products.service.js";
+import { usersService } from "../service/users.service.js";
 
 export async function createProductController(req, res, next) {
     try {
@@ -17,7 +19,17 @@ export async function deleteProductController(req, res, next) {
     try {
 
         let id = req.body.id
+        let product = await productsService.findProduct(id)
+        let ownerUser = await usersService.getUserData(product.owner)
+
+        if(ownerUser.typeOfUser == 'premium'){
+            await emailService.sendProductDeletedWarning(ownerUser.email, 
+                `Tu producto '${product.title}' ha sido eliminado de la tienda por el administrador.`
+                )
+        }
+        
         const productDeleted = await productsService.deleteProduct(id, req.user)
+
         res.deleted(productDeleted)
     } catch (error) {
         error.statusCode = 400
@@ -74,4 +86,14 @@ export async function updateProductsController(req, res, next) {
         error.statusCode = 400
         next(error)
     }
+}
+
+export async function getProductsController(req, res, next){
+try{
+    let products = await productsService.fetchProducts()
+     res.result(products.docs)
+}catch(error){
+    error.statusCode = 400
+    next(error)
+}
 }

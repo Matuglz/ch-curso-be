@@ -10,4 +10,4 @@ CartRouter.post("/", createCart)
 
 CartRouter.get("/:cid", getCarts)
 
-CartRouter.post('/:cid/pucharse',preLoginRule, buyCartController)
+CartRouter.post('/:cid/purchase',preLoginRule, buyCartController)

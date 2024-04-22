@@ -1,7 +1,7 @@
 const form = document.querySelector('#LoginForm')
 
 window.addEventListener('load', async()=>{
-    const res = await fetch('/api/Login')
+    const res = await fetch('/api/Sessions')
     if(res.status === 401){
         alert('ya estas logeado')
         return window.location.href = '/'
@@ -10,7 +10,7 @@ window.addEventListener('load', async()=>{
 
 form.addEventListener('submit', async (e)=>{
     e.preventDefault()
-    const res = await fetch('/api/Login',{
+    const res = await fetch('/api/Sessions',{
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(form))

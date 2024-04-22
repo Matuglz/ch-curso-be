@@ -5,16 +5,70 @@
         <div class="col">
             <div class="card h-100 text-center">
                 <img src={{#if this._id.thumbnail.[0]}} {{this._id.thumbnail.[0]}}
-                    {{else}}'../../static/img/default-product-img.png' {{/if}} class="card-img-top" alt={{this._id.title}}>
+                    {{else}}'../../static/img/default-product-img.png' {{/if}} class="card-img-top"
+                    alt={{this._id.title}}>
                 <div class="card-body">
                     <h5 class="card-title">{{this._id.title}}</h5>
                 </div>
-                <div class="card-footer d-flex justify-content-around">
-                    <small class="text-body-secondary">${{this._id.price}}</small><small class="text-body-secondary">unidades: {{this.cantidad}}</small>
+                <div class="card-footer d-flex justify-content-around" id={{this._id._id}}>
+                    <small class="text-body-secondary">${{this._id.price}}</small>
+                    <button class="btn btn-small btn-primary btn-less">-</button>
+                    <small class="text-body-secondary">unidades: {{this.cantidad}}</small>
+                    <button class="btn btn-small btn-primary btn-more">+</button>
                 </div>
             </div>
         </div>
         {{/each}}
     </div>
-            <button class="text-center btn btn-success">Comprar</button>
+    <button class="text-center btn btn-success">Comprar</button>
 </div>
+
+<script>
+    let btnLess = document.querySelectorAll('.btn-less')
+    let btnMore = document.querySelectorAll('.btn-more')
+    let btnBuy = document.querySelector('.btn-success')
+
+    async function getUser() {
+        const response = await fetch('/api/Sessions/current')
+        let data = await response.json()
+        return data.user
+    }
+
+    btnMore.forEach((b) => {
+
+        b.addEventListener('click', async (e) => {
+            let res = await fetch('/api/carts/current', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    prodId: b.parentElement.id,
+                    operation: 'add'
+                })
+            })
+        })
+    })
+    btnLess.forEach((b) => {
+
+        b.addEventListener('click', async (e) => {
+            let res = await fetch('/api/carts/current', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    prodId: b.parentElement.id,
+                    operation: 'less'
+                })
+            })
+        })
+    })
+
+    getUser().then((user) => {
+        btnBuy.addEventListener('click', async (e) => {
+
+            let res = await fetch(`/api/carts/${user.cart}/purchase`, {
+                method: 'POST'
+            })
+        })
+    })
+
+
+</script>

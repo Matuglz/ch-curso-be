@@ -1,0 +1,40 @@
+<div id="Productos" class=" card-group row row-cols-3">
+    {{#each users}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{this.email}}</h6>
+            <p class="card-text">rol: {{this.rol}}</p>
+            <div id={{this.email}}>
+                <a href="#" class="btn btn-small btn-success">Change Rol</a>
+                <a href="#" class="btn btn-small btn-warning">Delete User</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<script>
+    let btnRol = document.querySelectorAll('.btn-success')
+    let btnDelete = document.querySelectorAll('.btn-warning')
+
+
+    btnRol.forEach((b) => {
+        b.addEventListener('click', async (e) => {
+            e.preventDefault()
+            let send = fetch(`/api/premium/${b.parentElement.id}`,{
+                method:'POST'
+            })
+        })
+    })
+
+    btnDelete.forEach((b)=>{
+        b.addEventListener('click', async(e)=>{
+            e.preventDefault()
+            let send = fetch(`/api/Users/DeleteUser/${b.parentElement.id}`,{
+                method:'DELETE'
+            })
+        })
+    })
+
+</script>

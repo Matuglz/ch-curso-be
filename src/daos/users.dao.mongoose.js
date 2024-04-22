@@ -18,13 +18,13 @@ const userSchema = new mongoose.Schema({
     cart: { type: String, ref: 'carts', required: true },
     rol: { type: String, default: 'user' },
     documents: [{
-        _id:{type: String, default: randomUUID},
-        name:{type:String, required:true},
-        url:{type:String, required: true}
+        _id: { type: String, default: randomUUID },
+        name: { type: String, required: true },
+        url: { type: String, required: true }
     }],
-    last_connection:{type: String},
-    resetPasswordToken:{type:String},
-    resetPasswordExpires:{type:String}
+    last_connection: { type: String },
+    resetPasswordToken: { type: String },
+    resetPasswordExpires: { type: String }
 
 },
     {
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
             register: async function (body) {
                 try {
                     let email = body.email
-                    const findEmail = await userManager.findOne({ email }).lean()
+                    const findEmail = await userManager.findOne({ email })
                     if (findEmail) {
                         throw new Error('Ya existe una cuenta con ese email registrado')
                     }
@@ -44,11 +44,11 @@ const userSchema = new mongoose.Schema({
                     }
                     const cart = await cartsService.createCart({})
                     body.cart = cart._id
-                    return await mongoose.model(collection).create(body)
+                    return await userManager.create(body)
 
                 }
                 catch (error) {
-                    throw error
+                    throw new Error(error)
                 }
             },
 
@@ -84,34 +84,32 @@ const userSchema = new mongoose.Schema({
                 userPopulate.cart = cartProductsPopulate
                 return userPopulate
             },
-            changeRol: async function (id) {
+            changeRol: async function (email) {
                 try {
-                    let findUser = await mongoose.model(collection).findOne({ _id: id })
+                    let findUser = await mongoose.model(collection).findOne({ email: email })
                     if (!findUser) {
                         throw new Error(`user doesn't exist`)
                     }
-                    if (!findUser.documents.some(doc => doc.name === 'address') || !findUser.documents.some(doc => doc.name === 'identification')){
-                        throw new Error('you need complete the documentation to update to premium')
-                    }
-
-                    // if (findUser.rol === 'premium') {
-                    //     await mongoose.model(collection).findOneAndUpdate({ _id: id }, { $set: { rol: 'user' } })
+                    // if (!findUser.documents.some(doc => doc.name === 'address') || !findUser.documents.some(doc => doc.name === 'identification')) {
+                    //     throw new Error('you need complete the documentation to update to premium')
                     // }
                     if (findUser.rol === 'user') {
-                        await mongoose.model(collection).findOneAndUpdate({ _id: id }, { $set: { rol: 'premium' } })
+                        await mongoose.model(collection).findOneAndUpdate({ email: email }, { $set: { rol: 'premium' } })
+                    } else {
+                        await mongoose.model(collection).findOneAndUpdate({ email: email }, { $set: { rol: 'user' } })
                     }
                 } catch (error) {
                     throw new Error(error.message)
                 }
             },
-            updateConnection: async function(user, date){
-                try{
-                    if(!user){
+            updateConnection: async function (user, date) {
+                try {
+                    if (!user) {
                         throw new Error(`user isn't logged`)
                     }
-                   await mongoose.model(collection).findOneAndUpdate({email:user.email}, {$set:{last_connection:date}})
+                    await mongoose.model(collection).findOneAndUpdate({ email: user.email }, { $set: { last_connection: date } })
                 }
-                catch(error){
+                catch (error) {
                     throw new Error(error.message)
                 }
             }
@@ -122,12 +120,10 @@ const userManager = mongoose.model(collection, userSchema)
 
 class usersDaoMongoose {
     async register(body) {
-        // const user = await userManager.findOne({email: body.email})
         return await userManager.register(body)
     }
 
     async login(email, password) {
-        // const user = await userManager.findOne({email: email})
         return await userManager.login(email, password)
     }
 
@@ -139,11 +135,11 @@ class usersDaoMongoose {
         return await userManager.findOneAndUpdate({ _id: id }, { authEmail: true })
     }
 
-    async modifyRol(id) {
-        return await userManager.changeRol(id)
+    async modifyRol(email) {
+        return await userManager.changeRol(email)
     }
 
-    async caca(email) {
+    async generatePwdToken(email) {
         let user = await userManager.findOne({ email: email })
         if (!user) {
             throw new Error(`user doesn't exist`)
@@ -175,18 +171,74 @@ class usersDaoMongoose {
         await userManager.findOneAndUpdate({ resetPasswordToken: token }, { $set: { password: hashPassword(password) } })
     }
 
-    async updateConnection(user, date){
+    async updateConnection(user, date) {
         await userManager.updateConnection(user, date)
     }
 
-    async newFile(uid, type, url){
+    async newFile(uid, type, url) {
 
-        await userManager.findOneAndUpdate({_id : uid}, {$push:{documents:{
-            name:type,
-            url:url
-        }}})
+        await userManager.findOneAndUpdate({ _id: uid }, {
+            $push: {
+                documents: {
+                    name: type,
+                    url: url
+                }
+            }
+        })
     }
 
+    async getUsersInfo() {
+        let usersInfo = []
+        let users = await userManager.find()
+        users.forEach(user => {
+            usersInfo.push({
+                name: user.name,
+                lastName: user.lastName,
+                email: user.email,
+                typeOfUser: user.rol,
+                cart: user.cart,
+                rol: user.rol,
+                last_connection: user.last_connection ?? 'too much time'
+            })
+        });
+        return usersInfo
+    }
+
+    async getUser(uid) {
+        let user = await userManager.findOne({ _id: uid })
+        let userData = {
+            name: user.name,
+            lastName: user.lastName,
+            email: user.email,
+            typeOfUser: user.rol,
+            cart: user.cart,
+            last_connection: user.last_connection ?? 'too much time'
+        }
+        return userData
+    }
+
+    async deleteManyUsers(users) {
+        if (users.length == 0) {
+            throw new Error('dont have inactive users')
+        } else {
+            users.forEach(async (u) => {
+                await userManager.deleteOne({ email: u.email })
+                await cartsService.deleteCart(u.cart)
+            })
+        }
+    }
+
+    async deleteUser(email) {
+        if (!email) {
+            throw new Error('dont send email')
+        }
+        let user = await userManager.findOne({ email: email })
+        if (!user) {
+            throw new Error('this user doesnt exist')
+        } else {
+            await userManager.deleteOne({ email: email })
+        }
+    }
 }
 
 export async function getUsersDao() {

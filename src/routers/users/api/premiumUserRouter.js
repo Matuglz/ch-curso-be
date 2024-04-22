@@ -3,10 +3,10 @@ import { usersService } from "../../../service/users.service.js";
 
 export const premiumUserRouter = Router()
 
-premiumUserRouter.post('/:uid', async(req, res,next)=>{
+premiumUserRouter.post('/:uem', async(req, res,next)=>{
    try{ 
-    let id = req.params.uid
-    await usersService.changeRol(id)
+    let email = req.params.uem
+    await usersService.changeRol(email)
     res.updated()
 }catch(error){
     error.status = 400

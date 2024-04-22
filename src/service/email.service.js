@@ -40,6 +40,21 @@ class emailServices {
             throw new Error(error)
         }
     }
+
+    async sendProductDeletedWarning(email, text){
+        try{
+            let emailOptions = {
+                from: EMAIL_USER,
+                to: email,
+                subject: 'Your product has been deleted',
+                text: text
+            }
+            await this.transporter.sendMail(emailOptions)
+        }catch(error){
+            throw new Error(error)
+        }
+    }
+
 }
 
 export const emailService = new emailServices()

@@ -1,6 +1,7 @@
 import { cartsService } from "../service/carts.service.js"
 import { productsService } from "../service/products.service.js"
 import { ticketSerice } from "../service/ticket.service.js"
+import { usersService } from "../service/users.service.js"
 
 //CREATE CARTS
 export async function createCart(req, res, next) {
@@ -47,6 +48,7 @@ export async function deleteCartProduct(req, res, next) {
     try {
         const cartId = req.params.cid
         const prodId = req.params.pid
+        let user = await usersService.userPopulate()
         await cartsService.deleteProductFromCart(cartId, prodId)
         res.deleted()
     } catch (error) {
@@ -103,6 +105,23 @@ export async function buyCartController(req, res, next) {
          }
     }
     catch (error) {
+        error.statusCode = 400
+        next(error)
+    }
+}
+
+export async function updateProductQuantityController (req, res, next) {
+    try {
+        let cartId = req.user.cart
+        let prodId = req.body.prodId
+        let operation = req.body.operation
+        if (operation === 'add') {
+            await cartsService.incQuantity(cartId, prodId)
+        } else if (operation === 'less') {
+            await cartsService.lessQuantity(cartId, prodId)
+        }
+        res.updated()
+    } catch (error) {
         error.statusCode = 400
         next(error)
     }

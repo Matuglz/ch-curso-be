@@ -7,7 +7,7 @@
 
     window.addEventListener('load', async () => {
         try {
-            const res = await fetch('/api/Login/current')
+            const res = await fetch('/api/Sessions/current')
             let data = await res.json()
             const auth = await fetch(`/api/AuthEmail/${data.user._id}`)
             if (auth.status === 201) {

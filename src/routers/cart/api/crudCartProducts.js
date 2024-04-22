@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addProductsToCart, deleteAllCartProducts, deleteCartProduct } from "../../../controllers/carts.controller.js";
+import { addProductsToCart, deleteAllCartProducts, deleteCartProduct, updateProductQuantityController } from "../../../controllers/carts.controller.js";
 export const crudCartProducts = Router()
 
 
@@ -11,3 +11,6 @@ crudCartProducts.delete('/:cid/product/:pid', deleteCartProduct)
 
 //BORRAR TODOS LOS PRODUCTOS DEL CARRITO
 crudCartProducts.delete('/:cid', deleteAllCartProducts)
+
+//MODIFICAR CANTIDAD DEL CARRITO
+crudCartProducts.put('/current', updateProductQuantityController)

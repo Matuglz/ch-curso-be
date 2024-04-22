@@ -11,7 +11,7 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-body-secondary">${{this.price}}</small>
-                    <button class="btn btn-small btn-primary" id={{this._id}}>añadir al carrito</button>
+                    <button class="btn btn-small btn-primary" id={{this._id}} }>añadir al carrito</button>
                 </div>
             </div>
         </div>
@@ -33,12 +33,12 @@
     </nav>
 </section>
 
-{{!-- <script>
+<script>
     const addCartButtons = document.querySelectorAll('.btn-small')
 
 
     async function getUser() {
-        const response = await fetch('/api/Login/current')
+        const response = await fetch('/api/Sessions/current')
         let data = await response.json()
         return data.user
     }
@@ -46,13 +46,14 @@
     getUser().then((user) => {
         
             addCartButtons.forEach((b) => {
-                b.addEventListener('click', (e) => {
+                b.addEventListener('click', async (e) => {
                     e.preventDefault()
                     if(!user){
                         alert('necesitas loguearte')
                     }else{
-                        await fetch(`/api/carts/${user.cart._id}/product/${e.target.id}`, {
-                            method:'POST',
+                        console.log(user)
+                        await fetch(`/api/carts/${user.cart}/product/${e.target.id}`, {
+                            method:'POST'
                         })
                     }
                 })
@@ -60,4 +61,4 @@
         
     })
 
-</script> --}}
+</script>
