@@ -1004,3 +1004,4 @@
 {"level":"info","message":"[DELETE] /api/Users/DeleteUser/maty.capo01@gmail.com"}
 {"level":"info","message":"[GET] /api/users"}
 {"level":"info","message":"server runing on port 8080"}
+{"level":"info","message":"server runing on port 8080"}

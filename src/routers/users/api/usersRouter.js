@@ -1,6 +1,5 @@
 import { Router } from "express";
-import { getAllUsersController, registerController, deleteInactiveUsersController } from "../../../controllers/users.controller.js";
-import { usersService } from "../../../service/users.service.js";
+import { getAllUsersController, registerController, deleteInactiveUsersController, deleteOneUserController } from "../../../controllers/users.controller.js";
 import { onlyAdmins } from "../../../middlewares/autorization.js";
 
 
@@ -14,5 +13,5 @@ usersRouter.post('/', registerController)
 
 usersRouter.delete('/', deleteInactiveUsersController)
 
-usersRouter.delete('/DeleteUser/:uem',onlyAdmins, deleteUserController)
+usersRouter.delete('/DeleteUser/:uem',onlyAdmins, deleteOneUserController)
 

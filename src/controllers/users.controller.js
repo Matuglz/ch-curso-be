@@ -101,7 +101,7 @@ export async function deleteInactiveUsersController (req, res, next)  {
     }
 }
 
-export async function deleteUserController (req, res, next) {
+export async function deleteOneUserController (req, res, next) {
     try {
         let userEmail = req.params.uem
         await usersService.deleteOne(userEmail)
